@@ -12,6 +12,10 @@
     color: var(--branco);
 }
 
+span{
+    color: var(--verde);
+}
+
 .conteudo-principal{
     display: flex;
     flex-direction: column;
@@ -51,4 +55,10 @@
 
 .botao:last-child{
     border-radius: 0 0 20px 20px;
+}
+
+@media screen and (min-width:700px) {
+    .botoes{
+        display: flex;
+    }
 }
