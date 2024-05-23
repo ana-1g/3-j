@@ -1,10 +1,10 @@
 :root{
-    --cor-de-fundo: #1e1e1e;
+    --cor-de-fundo: #e70303;
     --verde: #5fff5f;
     --branco: #FFFFFF;
-    --botao-ativo: #3a373a;
-    --botao-inativo: rgba(58,55,94,0.5);
-    --texto-fundo: rgba(58,55,94,0.3);
+    --botao-ativo: #440a0a;
+    --botao-inativo: rgba(247, 126, 126, 0.5);
+    --texto-fundo: rgb(255, 255, 255);
 }
 
 *{
@@ -29,10 +29,7 @@ span{
 .titulo-principal{
     text-align: center;
     width: 100%;
-    font-size: 32px;
-}
-.botoes{
-    display: block;
+    font-size: 50px;
 }
 
 .botao{
@@ -42,11 +39,14 @@ span{
     justify-content: center;
     align-items: center;
     width: 100%;
-    font-size: 10px;
+    font-size: 20px;
     padding: 1em;
     border-bottom: 4px solid var(--botao-ativo);
     border-left: 2px solid var(--botao-ativo);
     border-right: 2px solid var(--botao-ativo);
+}
+.botoes{
+    display: block;
 }
 
 .botao:first-child{
@@ -56,9 +56,19 @@ span{
 .botao:last-child{
     border-radius: 0 0 20px 20px;
 }
+.ativo{
+    background-color: var(--botao-ativo);
+    border-bottom: 2px solid var(--verde);
+}
 
 @media screen and (min-width:700px) {
     .botoes{
         display: flex;
+    }
+    .botao:first-child{
+        border-radius: 20px 0 0 20px;
+    }
+    .botao:last-child{
+        border-radius: 0 20px 20px 0;
     }
 }
