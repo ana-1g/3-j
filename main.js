@@ -14,7 +14,12 @@ const agora = new Date()
 segundos = (tempoObjetivo1-agora)/1000 
 minutos = segundos/60
 horas = minutos/60
-dias = horas
+dias = horas/24
+segundos = Math.floor(segundos);
+minutos = Math.floor(minutos);
+horas = Math.floor(horas);
+dias = Math.floor(dias);
+tempo[0].textContent = `faltam ${dias} dias, ${horas} horas, ${minutos} minutos e ${segundos} segundos`
 console.log(tempo);
 for(let i = 0; i < botoes.length ; i++){
     botoes[i].onclick = function(){
@@ -26,4 +31,3 @@ for(let i = 0; i < botoes.length ; i++){
         conteudo[i].classList.add("ativo")
     }
 }
-
