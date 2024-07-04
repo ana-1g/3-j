@@ -19,6 +19,9 @@ segundos = Math.floor(segundos);
 minutos = Math.floor(minutos);
 horas = Math.floor(horas);
 dias = Math.floor(dias);
+segundos = segundos%60
+minutos = minutos%60
+horas = horas%60
 tempo[0].textContent = `faltam ${dias} dias, ${horas} horas, ${minutos} minutos e ${segundos} segundos`
 console.log(tempo);
 for(let i = 0; i < botoes.length ; i++){
